@@ -458,6 +458,13 @@ CWindowRuleApplicator::SRuleResult CWindowRuleApplicator::applyStaticRule(const 
             }
             case WINDOW_RULE_EFFECT_SCROLLING_WIDTH: {
                 static_.scrollingWidth = std::get<float>(value);
+            }
+            case WINDOW_RULE_EFFECT_NOMOUSEMOVE: {
+                static_.noMouseMove = std::get<bool>(value);
+                break;
+            }
+            case WINDOW_RULE_EFFECT_NOMOUSERESIZE: {
+                static_.noMouseResize = std::get<bool>(value);
                 break;
             }
         }
